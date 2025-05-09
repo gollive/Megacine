@@ -1,0 +1,72 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex" />
+  <style type="text/css">
+  
+  body {
+     margin: 0;
+     padding: 0;
+  }
+  
+  </style>
+  
+  </head>
+  
+  <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+  <script type="text/javascript">
+  function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\[").replace(/[\]]/, "\]");
+    var regex = new RegExp("[\?&]" + name + "=([^&#]*)"),
+    results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+  }
+  
+  var getURL = getParameterByName('get');
+  var getIMG = getParameterByName('img');
+  var getKEY  = getParameterByName('key');
+  var getKEY2  = getParameterByName('key2');
+  if (getURL == "#") {alert('Vuelve a la página anterior');}
+  </script>
+  <script src="https://content.jwplatform.com/libraries/KB5zFt7A.js"></script>
+  <script> jwplayer.key='XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';</script>
+  <div id="player"></div>
+  <script type="text/javascript">
+  var playerInstance=jwplayer("player");
+  
+  playerInstance.setup({
+  
+      playlist: [{
+      "title": "Tv On HD",
+      "description": "Mira de manera gratuita",
+      image: "",
+
+        "sources": [
+          {
+            "default": false,
+            "type": "dash",
+            "file": 'https://cloudflare.streamgato.us:3125/live/megacinetvlive.m3u8',
+            
+            "label": "0"
+          }
+          
+        ]
+      }],
+      
+      volume: 50,
+      width: "100%",
+      height: "100%",
+      aspectratio: "16:9",
+      autostart: false,
+      sharing: {},
+      cast: {},
+      logo: {
+          file: "https://i.ibb.co/B5KcypHr/TV-ONE-CLARO-NEGRO.png",
+          link: "https://www.mediafire.com/file/n7ucqlt8x3o1ktj/Gol_Live.apk/file",
+          position: "top-right"
+          
+      }
+  });
+  </script>
+
+  </html>
